@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Viva Sorte</title>
@@ -53,7 +53,7 @@
                         <div class="tag-compre-agora">
                             <span>Site Oficial</span>
                         </div>
-                        <img src="images/gif banner.gif" class="d-block w-100" alt="...">
+                        <video src="images/viva-sorte.mp4" class="d-block w-100" autoplay muted loop playsinline></video>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
     
     
     <div class="sorteio-date w-100 text-center">
-    <h1>Sorteio em <span style="background-color: #f0ad4e;" id="contador">7 dias</span> por apenas <span style="background-color: #2f4eb5;">R$1,99</span> </h1>
+    <h1>Sorteio em <span style="background-color: #f0ad4e;" id="contador">7 dias</span> Agora o VIVA SORTE está por apenas <span style="background-color: #2f4eb5;">R$0,49</span> </h1>
     </div>
     
     
@@ -114,27 +114,27 @@
     <div class="cotas">
     
     <div class="cotas-one">
-    <button type="button" class="cota" onclick="selecionarValor(10)">
-    <div class="cota-qtd">
-    +10
-    </div>
-    <h1>R$19,99</h1>
-    <h2>SELECIONAR</h2>
-    </button>
-    
-    <button type="button" class="cota" onclick="selecionarValor(20)">
-    <div class="cota-qtd">
-    +20
-    </div>
-    <h1>R$39,80</h1>
-    <h2>SELECIONAR</h2>
-    </button>
-    
     <button type="button" class="cota" onclick="selecionarValor(40)">
     <div class="cota-qtd">
     +40
     </div>
-    <h1>R$79,60</h1>
+    <h1>R$19,60</h1>
+    <h2>SELECIONAR</h2>
+    </button>
+    
+    <button type="button" class="cota" onclick="selecionarValor(80)">
+    <div class="cota-qtd">
+    +80
+    </div>
+    <h1>R$39,20</h1>
+    <h2>SELECIONAR</h2>
+    </button>
+    
+    <button type="button" class="cota" onclick="selecionarValor(160)">
+    <div class="cota-qtd">
+    +160
+    </div>
+    <h1>R$78,40</h1>
     <h2>SELECIONAR</h2>
     </button>
     
@@ -144,29 +144,30 @@
     
     <div class="cotas-one">
     
-    <button type="button" class="cota" onclick="selecionarValor(60)">
+    <button type="button" class="cota" onclick="selecionarValor(240)">
+       <i class="bi bi-star-fill destaque"></i>
     <div class="cota-qtd"> 
-+60 
++240
     </div> 
-    <h1>R$119,40</h1>
+    <h1>R$117,60</h1>
     <h2>SELECIONAR</h2>
     </button>
     
     
     
-    <button type="button" class="cota" onclick="selecionarValor(80)">
+    <button type="button" class="cota" onclick="selecionarValor(320)">
     <div class="cota-qtd">
-    +80
+    +320
     </div>
-    <h1>R$159,20</h1>
+    <h1>R$156,80</h1>
     <h2>SELECIONAR</h2>
     </button>
     
-    <button type="button" class="cota" onclick="selecionarValor(100)">
+    <button type="button" class="cota" onclick="selecionarValor(400)">
     <div class="cota-qtd">
-    +100
+    +400
     </div>
-    <h1>R$199,00</h1>
+    <h1>R$196,00</h1>
     <h2>SELECIONAR</h2>
     </button>
     
@@ -220,7 +221,7 @@ COMPRAR TÍTULOS
     <h2>Viva Privilégios</h2>
     </div>
     <div class="card-hospital-text">
-    <p>Viva Privilégios, um programa que enriquece sua vida com acesso ���&nbsp; saúde, alimentação, transporte e mais. Com cada compra, acumule pontos para trocar por consultas médicas, receber cashback, e utilizar serviços de telefonia e apps de transporte e alimentação. Eleve sua qualidade de vida e desfrute de mais conveniência e economia!</p>
+    <p>Viva Privilégios, um programa que enriquece sua vida com acesso &nbsp; saúde, alimentação, transporte e mais. Com cada compra, acumule pontos para trocar por consultas médicas, receber cashback, e utilizar serviços de telefonia e apps de transporte e alimentação. Eleve sua qualidade de vida e desfrute de mais conveniência e economia!</p>
     </div>
     </div>
     
@@ -270,7 +271,7 @@ COMPRAR TÍTULOS
     
     <script>
       // Configuração inicial
-      const precoPorUnidade = 1.99;
+      const precoPorUnidade = 0.49;
       
       // Mapeamento dos links de pagamento (SEM parâmetros)
       const paymentLinks = {
@@ -291,19 +292,19 @@ COMPRAR TÍTULOS
       function incrementar() {
         var input = document.getElementById('numero');
         var valorAtual = parseInt(input.value);
-        if (valorAtual < 100) {
+        if (valorAtual < 400) {
           if (valorAtual === 0) {
-            input.value = 10;
-          } else if (valorAtual === 10) {
-            input.value = 20;
-          } else if (valorAtual === 20) {
             input.value = 40;
           } else if (valorAtual === 40) {
-            input.value = 60;
-          } else if (valorAtual === 60) {
             input.value = 80;
           } else if (valorAtual === 80) {
-            input.value = 100;
+            input.value = 160;
+          } else if (valorAtual === 160) {
+            input.value = 240;
+          } else if (valorAtual === 240) {
+            input.value = 320;
+          } else if (valorAtual === 320) {
+            input.value = 400;
           }
         }
         highlightButton();
@@ -313,17 +314,17 @@ COMPRAR TÍTULOS
       function decrementar() {
         var input = document.getElementById('numero');
         var valorAtual = parseInt(input.value);
-        if (valorAtual > 10) {
-          if (valorAtual === 100) {
+        if (valorAtual > 40) {
+          if (valorAtual === 400) {
+            input.value = 320;
+          } else if (valorAtual === 320) {
+            input.value = 240;
+          } else if (valorAtual === 240) {
+            input.value = 160;
+          } else if (valorAtual === 160) {
             input.value = 80;
           } else if (valorAtual === 80) {
-            input.value = 60;
-          } else if (valorAtual === 60) {
             input.value = 40;
-          } else if (valorAtual === 40) {
-            input.value = 20;
-          } else if (valorAtual === 20) {
-            input.value = 10;
           }
         }
         highlightButton();
@@ -388,10 +389,10 @@ COMPRAR TÍTULOS
         var valor = parseInt(this.value);
         if (valor > 500) {
           this.value = 500;
-        } else if (valor < 10) {
+        } else if (valor < 40) {
           this.value = 0;
-        } else if (valor % 10 !== 0) {
-          this.value = Math.floor(valor / 10) * 10;
+        } else if (valor % 40 !== 0) {
+          this.value = Math.floor(valor / 40) * 40;
         }
         highlightButton();
       });
@@ -461,7 +462,7 @@ COMPRAR TÍTULOS
     function criarToast() {
         const nome = nomes[Math.floor(Math.random() * nomes.length)];
         const cidade = cidades[Math.floor(Math.random() * cidades.length)];
-        const cotas = [10, 20, 40, 60, 80, 100][Math.floor(Math.random() * 6)];
+        const cotas = [40, 80, 160, 240, 320, 400][Math.floor(Math.random() * 6)];
         
         const toastContainer = document.querySelector('.toast-container');
         const toast = document.createElement('div');
